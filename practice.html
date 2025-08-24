@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <h1 id="number">0</h1>
+    <div>
+        <button id="button-1">button 1</button>
+        <button id="button-2">button 2</button>
+        <button id="button-3">button 3</button>
+    </div>
+    <h3 id="addNumber">0</h3>
+    <div>
+        <button id="button-4">button 4</button>
+        <button id="button-5">button 5</button>
+        <button id="button-6">button 6</button>
+    </div>
+    <script>
+        // deep way
+        document.getElementById('button-1').addEventListener('click', function () {
+            const numberAdd = document.getElementById('number');
+            numberAdd.innerText = '1';
+        })
+        document.getElementById('button-2').addEventListener('click', function () {
+            const numberAdd = document.getElementById('number');
+            numberAdd.innerText = '2';
+        })
+        document.getElementById('button-3').addEventListener('click', function () {
+            const numberAdd = document.getElementById('number');
+            numberAdd.innerText = '3';
+        })
+
+        // simple way
+        function putNumber(num) {
+            const totalNumberAdd = document.getElementById('addNumber');
+            totalNumberAdd.innerText = num;
+        }
+        document.getElementById('button-4').addEventListener('click', function () {
+            putNumber(4);
+        })
+        document.getElementById('button-5').addEventListener('click', function () {
+            putNumber(5)
+        })
+        document.getElementById('button-6').addEventListener('click', function () {
+            putNumber(6)
+        })
+    </script>
+</body>
+
+</html>
